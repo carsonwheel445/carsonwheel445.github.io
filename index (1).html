@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cars on Wheels — Mobile Car Detailing Service</title>
+  <meta name="description" content="Professional mobile car detailing that comes to you. Showroom shine delivered to your driveway. Book interior, exterior, or full detail packages." />
+
+  <meta property="og:title" content="Cars on Wheels — Mobile Car Detailing" />
+  <meta property="og:description" content="Professional mobile car detailing that comes to you. Showroom shine delivered to your driveway." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://carsonwheels.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://carsonwheels.com/" />
+  <link rel="icon" href="https://carsonwheels.netlify.app/favicon.ico" />
+
+  <link rel="stylesheet" href="./dist/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --background: 215 30% 15%;
+      --foreground: 0 0% 96%;
+      --card: 217 29% 9%;
+      --card-foreground: 210 36% 96%;
+      --primary: 25 100% 55%;
+      --primary-foreground: 0 0% 100%;
+      --muted-foreground: 213 19% 62%;
+      --border: 213 29% 23%;
+
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-heading: "Oswald", -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { border-color: hsl(var(--border)); }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+      font-family: var(--font-sans);
+    }
+
+    h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
+
+    .bg-background { background-color: hsl(var(--background)); }
+    .bg-card { background-color: hsl(var(--card)); }
+    .text-foreground { color: hsl(var(--foreground)); }
+    .text-card-foreground { color: hsl(var(--card-foreground)); }
+    .text-primary { color: hsl(var(--primary)); }
+    .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+    .bg-primary { background-color: hsl(var(--primary)); }
+    .text-primary-foreground { color: hsl(var(--primary-foreground)); }
+    .border-border { border-color: hsl(var(--border)); }
+    .border-primary { border-color: hsl(var(--primary)); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="sticky top-0 z-50 bg-background border-b border-border">
+    <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+          <span class="text-xl font-bold tracking-wide">
+            CARS ON <span class="text-primary">WHEELS</span>
+          </span>
+        </a>
+        <a href="#book" class="book-btn px-5 py-2 text-sm font-semibold tracking-wider uppercase text-white bg-primary hover:opacity-90 transition-opacity">
+          Book Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="relative bg-background overflow-hidden py-20 md:py-32">
+      <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border-[40px] opacity-5 pointer-events-none border-foreground" aria-hidden="true"></div>
+      <div class="absolute right-24 top-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full border-[20px] opacity-5 pointer-events-none border-foreground" aria-hidden="true"></div>
+      <div class="absolute right-48 top-1/2 -translate-y-1/2 w-[120px] h-[120px] rounded-full border-[10px] opacity-5 pointer-events-none border-foreground" aria-hidden="true"></div>
+
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
+        <div class="max-w-2xl">
+          <p class="text-xs font-semibold tracking-[0.25em] text-primary mb-4 uppercase">MOBILE DETAILING SERVICE</p>
+          <h1 class="text-9xl leading-none mb-6 font-bold">
+            <span class="text-foreground">CARS ON </span><span class="text-primary">WHEELS</span>
+          </h1>
+          <p class="text-base md:text-lg text-muted-foreground mb-8 max-w-md leading-relaxed">
+            Mobile detailing that comes to you. Showroom shine, delivered to your driveway.
+          </p>
+          <a href="#book" class="book-btn inline-block px-8 py-4 font-bold tracking-widest uppercase text-white bg-primary hover:opacity-90 transition-opacity">
+            Book Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PACKAGES ===================== -->
+    <section class="bg-card py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-12">
+          <p class="text-xs font-semibold tracking-[0.25em] text-primary mb-3 uppercase">SERVICE PACKAGES</p>
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">PICK YOUR PACKAGE</h2>
+          <p class="text-muted-foreground max-w-xl mx-auto">
+            Interior, exterior, or both — every package is built to leave your ride looking factory-fresh.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Quick Interior -->
+          <div class="bg-background border border-border p-6 flex flex-col gap-4">
+            <div>
+              <h3 class="text-xl font-bold tracking-wide">QUICK INTERIOR</h3>
+              <p class="text-xs text-muted-foreground mt-1">~1 hour</p>
+            </div>
+            <p class="text-4xl font-bold text-primary">$50</p>
+            <ul class="flex flex-col gap-2 mt-2 text-sm text-muted-foreground">
+              <li>Vacuum</li>
+              <li>Interior wipe-down</li>
+              <li>Door panels</li>
+              <li>Interior glass cleaning</li>
+              <li>Cupholders & crevices</li>
+              <li>Console wipe-down & port cleaning</li>
+            </ul>
+            <a href="#book" data-service="Quick Interior — $50" class="book-btn mt-auto block text-center py-3 text-sm font-semibold tracking-wider uppercase border border-primary text-primary hover:bg-primary hover:text-white transition-colors">Book This</a>
+          </div>
+
+          <!-- Interior Detail -->
+          <div class="bg-background border border-border p-6 flex flex-col gap-4">
+            <div>
+              <h3 class="text-xl font-bold tracking-wide">INTERIOR DETAIL</h3>
+              <p class="text-xs text-muted-foreground mt-1">~2 hours</p>
+            </div>
+            <p class="text-4xl font-bold text-primary">$100</p>
+            <ul class="flex flex-col gap-2 mt-2 text-sm text-muted-foreground">
+              <li>Everything in Quick Interior</li>
+              <li>Deodorize</li>
+              <li>Deep vacuum (seats/carpets/floor)</li>
+              <li>Shampoo floor mats</li>
+              <li>Spot treatment & stain removal</li>
+              <li>Door jambs</li>
+              <li>Leather/vinyl cleaning & conditioning</li>
+              <li>Thorough seat cleaning</li>
+            </ul>
+            <a href="#book" data-service="Interior Detail — $100" class="book-btn mt-auto block text-center py-3 text-sm font-semibold tracking-wider uppercase border border-primary text-primary hover:bg-primary hover:text-white transition-colors">Book This</a>
+          </div>
+
+          <!-- Exterior Detail -->
+          <div class="bg-background border border-border p-6 flex flex-col gap-4">
+            <div>
+              <h3 class="text-xl font-bold tracking-wide">EXTERIOR DETAIL</h3>
+            </div>
+            <p class="text-4xl font-bold text-primary">$50</p>
+            <ul class="flex flex-col gap-2 mt-2 text-sm text-muted-foreground">
+              <li>Soap wash</li>
+              <li>Bug removal</li>
+              <li>Wheel & tire cleaning</li>
+              <li>Tire shine</li>
+              <li>Exterior windows</li>
+              <li>Quick inspection</li>
+            </ul>
+            <a href="#book" data-service="Exterior Detail — $50" class="book-btn mt-auto block text-center py-3 text-sm font-semibold tracking-wider uppercase border border-primary text-primary hover:bg-primary hover:text-white transition-colors">Book This</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ADD-ONS ===================== -->
+    <section class="bg-muted py-10 border-y border-border" style="background-color: hsl(212 30% 17%);">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-12">
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-bold tracking-[0.2em] text-primary uppercase">SUPERCHARGES</span>
+            <span class="px-2 py-0.5 text-xs font-bold bg-primary text-white tracking-wider">ADD-ONS</span>
+          </div>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <div class="flex items-center gap-3 border border-border bg-card px-5 py-3">
+              <span class="text-sm font-bold tracking-wide">CERAMIC SPRAY</span>
+              <span class="text-sm font-bold text-primary">+$15</span>
+            </div>
+            <div class="flex items-center gap-3 border border-border bg-card px-5 py-3">
+              <span class="text-sm font-bold tracking-wide">CLOTH-SEAT SURCHARGE</span>
+              <span class="text-sm font-bold text-primary">+$15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diagonal stripe divider -->
+    <div class="w-full overflow-hidden h-6 flex" aria-hidden="true" id="stripe-divider-1"></div>
+
+    <!-- ===================== MAINTENANCE ===================== -->
+    <section class="bg-background py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-12">
+          <p class="text-xs font-semibold tracking-[0.25em] text-primary mb-3 uppercase">À LA CARTE</p>
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">MAINTENANCE SERVICES</h2>
+          <p class="text-muted-foreground max-w-xl mx-auto">Quick, essential upkeep — added on their own or bundled into a package.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+          <!-- À la carte list -->
+          <div class="flex flex-col gap-0">
+            <div class="flex items-center justify-between py-3 border-b border-border">
+              <span class="text-sm">Oil Change</span>
+              <span class="text-sm font-bold text-primary">$15 + $10/qt</span>
+            </div>
+            <div class="flex items-center justify-between py-3 border-b border-border">
+              <span class="text-sm">Tire Rotation</span>
+              <span class="text-sm font-bold text-primary">$30</span>
+            </div>
+            <div class="flex items-center justify-between py-3 border-b border-border">
+              <span class="text-sm">Tire Pressure Check/Adjustment</span>
+              <span class="text-sm font-bold text-primary">$5</span>
+            </div>
+            <div class="flex items-center justify-between py-3 border-b border-border">
+              <span class="text-sm">Battery Health Check</span>
+              <span class="text-sm font-bold text-primary">$5</span>
+            </div>
+            <div class="flex items-center justify-between py-3 border-b border-border">
+              <span class="text-sm">Washer Fluid Top-Off</span>
+              <span class="text-sm font-bold text-primary">$2</span>
+            </div>
+            <div class="flex items-center justify-between py-3 border-b border-border">
+              <span class="text-sm">Coolant Top-Off</span>
+              <span class="text-sm font-bold text-primary">$5</span>
+            </div>
+            <div class="flex items-center justify-between py-3 border-b border-border">
+              <span class="text-sm">Windshield Wiper Replacement</span>
+              <span class="text-sm font-bold text-primary">$30</span>
+            </div>
+            <div class="flex items-center justify-between py-3 border-b border-border">
+              <span class="text-sm">Air Filter Replacement</span>
+              <span class="text-sm font-bold text-primary">$30</span>
+            </div>
+            <div class="flex items-center justify-between py-3">
+              <span class="text-sm">Cabin Air Filter Replacement</span>
+              <span class="text-sm font-bold text-primary">$30</span>
+            </div>
+
+            <!-- Premium services -->
+            <div class="mt-6">
+              <p class="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-3">PREMIUM SERVICES</p>
+              <div class="bg-card" style="border: 1px solid hsl(25 100% 55% / 0.4);">
+                <div class="flex items-center justify-between px-4 py-3 border-b border-border">
+                  <span class="text-sm">Battery Replacement</span>
+                  <span class="text-sm font-bold text-primary">$150+</span>
+                </div>
+                <div class="flex items-center justify-between px-4 py-3 border-b border-border">
+                  <span class="text-sm">Brake Pad Replacement</span>
+                  <span class="text-sm font-bold text-primary">$150+</span>
+                </div>
+                <div class="flex items-center justify-between px-4 py-3">
+                  <span class="text-sm">Brake Rotor Replacement</span>
+                  <span class="text-sm font-bold text-primary">$200+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bundle -->
+          <div class="border-2 bg-card p-6 flex flex-col gap-4 border-primary">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 text-xs font-bold bg-primary text-white tracking-wider">BUNDLE</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold tracking-wide">MAINTENANCE PACKAGE</h3>
+              <p class="text-4xl font-bold text-primary mt-2">$100</p>
+            </div>
+            <ul class="flex flex-col gap-2 text-sm text-muted-foreground">
+              <li>Tire rotation</li>
+              <li>Tire pressure adjustment</li>
+              <li>Fluid-level top off</li>
+              <li>Battery check</li>
+              <li>Plus 1 free à la carte maintenance service of choice (Premium services not included)</li>
+            </ul>
+            <a href="#book" data-service="Maintenance Package — $100" class="book-btn mt-auto block text-center py-3 text-sm font-semibold tracking-wider uppercase bg-primary text-white hover:opacity-90 transition-opacity">Book This</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FLAGSHIP OFFER ===================== -->
+    <section class="bg-card py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="max-w-2xl mx-auto">
+          <div class="border-2 bg-background p-8 md:p-12 flex flex-col gap-6 relative border-primary" style="box-shadow: 0 0 40px hsl(25 100% 55% / 0.15);">
+            <div class="flex flex-wrap items-center gap-3">
+              <p class="text-xs font-semibold tracking-[0.25em] text-primary uppercase">THE FLAGSHIP OFFER</p>
+              <span class="px-3 py-1 text-xs font-bold bg-primary text-white tracking-wider">BEST VALUE · SAVE $60</span>
+            </div>
+            <div>
+              <h2 class="text-4xl md:text-5xl font-bold">THE WHOLE SHABANG</h2>
+              <p class="text-muted-foreground mt-2">Complete Vehicle Refresh</p>
+            </div>
+            <div class="flex items-baseline gap-3">
+              <span class="text-muted-foreground line-through text-lg">$310</span>
+              <span class="text-5xl font-bold text-primary">$250</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-muted-foreground">
+              <div>Full Interior Detail</div>
+              <div>Full Exterior Detail</div>
+              <div>Full Maintenance Package</div>
+              <div>Plus 2 free maintenance services of choice (Premium services not included)</div>
+            </div>
+            <a href="#book" data-service="The Whole Shabang — $250" class="book-btn block text-center py-4 font-bold tracking-widest uppercase text-white bg-primary hover:opacity-90 transition-opacity">Book The Whole Shabang</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diagonal stripe divider -->
+    <div class="w-full overflow-hidden h-6 flex" aria-hidden="true" id="stripe-divider-2"></div>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="bg-card py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="flex flex-col gap-5">
+            <p class="text-xs font-semibold tracking-[0.25em] text-primary uppercase">ABOUT US</p>
+            <h2 class="text-4xl md:text-5xl font-bold leading-tight">WHO WE <span class="text-primary">ARE</span></h2>
+            <p class="text-muted-foreground leading-relaxed">
+              Two seniors raising money for college with a deep interest in cars and keeping yours clean. What started as a shared interest in cars developed into a mission of bringing professional-grade detailing straight to your driveway.
+            </p>
+            <div class="flex flex-col gap-3 mt-2">
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-medium">Two seniors raising money for college</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-medium">Deep interest in cars & keeping yours clean</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-medium">Mobile service — we come to you</span>
+              </div>
+            </div>
+            <a href="#book" class="book-btn mt-2 inline-block px-8 py-3 font-bold tracking-widest uppercase text-white bg-primary hover:opacity-90 transition-opacity self-start">Book Now</a>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-background border border-border p-6 flex flex-col gap-1">
+              <span class="text-4xl font-bold text-primary">100%</span>
+              <span class="text-sm text-muted-foreground">Mobile Service</span>
+            </div>
+            <div class="bg-background border border-border p-6 flex flex-col gap-1">
+              <span class="text-4xl font-bold text-primary">2</span>
+              <span class="text-sm text-muted-foreground">Passionate Detailers</span>
+            </div>
+            <div class="bg-background border border-border p-6 flex flex-col gap-1">
+              <span class="text-4xl font-bold text-primary" id="customer-count">0</span>
+              <span class="text-sm text-muted-foreground">Satisfied Customers</span>
+            </div>
+            <div class="bg-background border border-border p-6 flex flex-col gap-1">
+              <span class="text-4xl font-bold text-primary">0</span>
+              <span class="text-sm text-muted-foreground">Hidden Fees</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BOOKING FORM ===================== -->
+    <section id="book" class="bg-background py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-10">
+          <p class="text-xs font-semibold tracking-[0.25em] text-primary mb-3 uppercase">GET STARTED</p>
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">BOOK NOW</h2>
+          <p class="text-muted-foreground max-w-md mx-auto">
+            Tell us about your vehicle and what you need — we'll get back to you to schedule your mobile detail.
+          </p>
+        </div>
+
+        <div class="max-w-lg mx-auto bg-card border border-border p-8">
+          <form class="flex flex-col gap-5" method="POST" action="https://formspree.io/f/xjyvqjkn" id="booking-form">
+            <!-- honeypot -->
+            <input tabindex="-1" autocomplete="off" aria-hidden="true" type="text" name="_gotcha" style="position:absolute; left:-9999px;" />
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex flex-col gap-1.5">
+                <label for="book-name" class="text-xs uppercase tracking-wider text-muted-foreground">Name <span class="text-primary">*</span></label>
+                <input id="book-name" name="name" required placeholder="Jane Doe"
+                  class="bg-background border border-border px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label for="book-phone" class="text-xs uppercase tracking-wider text-muted-foreground">Phone <span class="text-primary">*</span></label>
+                <input id="book-phone" name="phone" type="tel" required placeholder="(555) 123-4567"
+                  class="bg-background border border-border px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+              <label for="book-service" class="text-xs uppercase tracking-wider text-muted-foreground">Service Interested In <span class="text-primary">*</span></label>
+              <select id="book-service" name="service" required
+                class="bg-background border border-border px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors appearance-none">
+                <option value="">Select a service...</option>
+                <option value="Quick Interior — $50">Quick Interior — $50</option>
+                <option value="Interior Detail — $100">Interior Detail — $100</option>
+                <option value="Exterior Detail — $50">Exterior Detail — $50</option>
+                <option value="Maintenance Package — $100">Maintenance Package — $100</option>
+                <option value="The Whole Shabang — $250">The Whole Shabang — $250</option>
+              </select>
+            </div>
+
+            <!-- Dynamically populated free à la carte service picker(s) for Maintenance Package / Whole Shabang -->
+            <div id="ala-carte-picker" class="flex flex-col gap-2 hidden"></div>
+
+            <div class="flex flex-col gap-2">
+              <span class="text-xs uppercase tracking-wider text-muted-foreground">Premium Services <span class="text-muted-foreground text-xs normal-case">(optional)</span></span>
+              <div class="border border-border p-4 flex flex-col gap-3">
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input class="w-4 h-4 accent-primary cursor-pointer" type="checkbox" name="premium" value="Battery Replacement — $150+" />
+                  <span class="text-sm group-hover:text-primary transition-colors">Battery Replacement — $150+</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input class="w-4 h-4 accent-primary cursor-pointer" type="checkbox" name="premium" value="Brake Pad Replacement — $150+" />
+                  <span class="text-sm group-hover:text-primary transition-colors">Brake Pad Replacement — $150+</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input class="w-4 h-4 accent-primary cursor-pointer" type="checkbox" name="premium" value="Brake Rotor Replacement — $200+" />
+                  <span class="text-sm group-hover:text-primary transition-colors">Brake Rotor Replacement — $200+</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <span class="text-xs uppercase tracking-wider text-muted-foreground">Supercharges (Add-Ons) <span class="text-muted-foreground text-xs normal-case">(optional)</span></span>
+              <div class="border border-border p-4 flex flex-col gap-3">
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input class="w-4 h-4 accent-primary cursor-pointer" type="checkbox" name="addon" value="Ceramic Spray — $15" />
+                  <span class="text-sm group-hover:text-primary transition-colors">Ceramic Spray — $15</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input class="w-4 h-4 accent-primary cursor-pointer" type="checkbox" name="addon" value="Cloth-Seat Surcharge — $15" />
+                  <span class="text-sm group-hover:text-primary transition-colors">Cloth-Seat Surcharge — $15</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3">
+              <div class="flex flex-col gap-1.5">
+                <label for="book-car-year" class="text-xs uppercase tracking-wider text-muted-foreground">Year <span class="text-primary">*</span></label>
+                <input id="book-car-year" name="car_year" required maxlength="4" placeholder="2019"
+                  class="bg-background border border-border px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label for="book-car-make" class="text-xs uppercase tracking-wider text-muted-foreground">Make <span class="text-primary">*</span></label>
+                <input id="book-car-make" name="car_make" required placeholder="Toyota"
+                  class="bg-background border border-border px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label for="book-car-model" class="text-xs uppercase tracking-wider text-muted-foreground">Model <span class="text-primary">*</span></label>
+                <input id="book-car-model" name="car_model" required placeholder="Camry"
+                  class="bg-background border border-border px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+              <label for="book-message" class="text-xs uppercase tracking-wider text-muted-foreground">Message</label>
+              <textarea id="book-message" name="message" rows="4" placeholder="Tell us about your vehicle, location, and preferred time..."
+                class="bg-background border border-border px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 font-bold tracking-widest uppercase text-white bg-primary hover:opacity-90 disabled:opacity-60 transition-opacity">
+              Book Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-card border-t border-border">
+    <div class="container mx-auto px-4 md:px-8 py-12 max-w-7xl">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="flex flex-col gap-3">
+          <span class="text-2xl font-bold tracking-wide">🚗 CARS ON <span class="text-primary">WHEELS</span></span>
+          <p class="text-sm text-muted-foreground leading-relaxed">Mobile detailing that comes to you — anywhere, anytime.</p>
+          <div class="flex flex-col gap-2 text-sm text-muted-foreground mt-2">
+            <span class="flex items-center gap-2"><span>📞</span><span>(346) 293-2342</span></span>
+            <span class="flex items-center gap-2"><span>📞</span><span>(346) 629-7474</span></span>
+            <span class="flex items-center gap-2"><span>✉️</span><span>carsonwheel445@gmail.com</span></span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-4">
+          <p class="text-xs uppercase tracking-widest text-muted-foreground">Follow Us</p>
+          <div class="flex gap-4">
+            <a href="https://www.instagram.com/cars.on_wheel/?utm_source=ig_embed&utm_campaign=loading" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+              class="w-10 h-10 flex items-center justify-center border border-border rounded-full text-muted-foreground hover:text-primary hover:border-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex md:justify-end">
+          <a href="#book" class="book-btn px-8 py-3 font-semibold tracking-wider uppercase text-white bg-primary hover:opacity-90 transition-opacity">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-border">
+      <div class="container mx-auto px-4 md:px-8 py-4 text-center text-xs text-muted-foreground max-w-7xl">
+        © 2026 Cars on Wheels. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Renders the diagonal two-tone stripe divider used between sections,
+    // matching the original site's repeating alternating-column pattern.
+    function renderStripeDivider(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const columns = 40;
+      let html = '';
+      for (let i = 0; i < columns; i++) {
+        const flip = i % 2 === 0;
+        html += `<div class="flex-1 flex flex-col">
+          <div class="flex-1" style="background-color: hsl(${flip ? 'var(--foreground)' : 'var(--card)'})"></div>
+          <div class="flex-1" style="background-color: hsl(${flip ? 'var(--card)' : 'var(--foreground)'})"></div>
+        </div>`;
+      }
+      el.innerHTML = html;
+    }
+    renderStripeDivider('stripe-divider-1');
+    renderStripeDivider('stripe-divider-2');
+
+    // ---- À la carte maintenance items available as free picks ----
+    const ALA_CARTE_ITEMS = [
+      'Oil Change',
+      'Tire Rotation',
+      'Tire Pressure Check/Adjustment',
+      'Battery Health Check',
+      'Washer Fluid Top-Off',
+      'Coolant Top-Off',
+      'Windshield Wiper Replacement',
+      'Air Filter Replacement',
+      'Cabin Air Filter Replacement'
+    ];
+
+    const serviceSelect = document.getElementById('book-service');
+    const pickerContainer = document.getElementById('ala-carte-picker');
+
+    function buildAlaCartePicker(count) {
+      pickerContainer.innerHTML = '';
+      if (count === 0) {
+        pickerContainer.classList.add('hidden');
+        return;
+      }
+      pickerContainer.classList.remove('hidden');
+
+      const label = document.createElement('span');
+      label.className = 'text-xs uppercase tracking-wider text-muted-foreground';
+      label.textContent = count === 1
+        ? 'Choose Your Free À La Carte Service'
+        : `Choose Your ${count} Free À La Carte Services`;
+      pickerContainer.appendChild(label);
+
+      const wrap = document.createElement('div');
+      wrap.className = 'border border-border p-4 flex flex-col gap-3';
+      pickerContainer.appendChild(wrap);
+
+      const selects = [];
+      for (let i = 0; i < count; i++) {
+        const field = document.createElement('div');
+        field.className = 'flex flex-col gap-1.5';
+
+        const sel = document.createElement('select');
+        sel.name = `free_ala_carte_${i + 1}`;
+        sel.required = true;
+        sel.className = 'bg-background border border-border px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors appearance-none';
+        field.appendChild(sel);
+        wrap.appendChild(field);
+        selects.push(sel);
+      }
+
+      function refreshOptions() {
+        const chosen = selects.map(s => s.value).filter(Boolean);
+        selects.forEach(sel => {
+          const current = sel.value;
+          sel.innerHTML = '';
+          const blank = document.createElement('option');
+          blank.value = '';
+          blank.textContent = count === 1 ? 'Select a service...' : `Select service ${selects.indexOf(sel) + 1}...`;
+          sel.appendChild(blank);
+          ALA_CARTE_ITEMS.forEach(item => {
+            // Only prevent duplicates when there's more than one picker (Whole Shabang)
+            if (count > 1 && chosen.includes(item) && item !== current) return;
+            const opt = document.createElement('option');
+            opt.value = item;
+            opt.textContent = item;
+            sel.appendChild(opt);
+          });
+          sel.value = current;
+        });
+      }
+
+      selects.forEach(sel => sel.addEventListener('change', refreshOptions));
+      refreshOptions();
+    }
+
+    serviceSelect.addEventListener('change', () => {
+      const val = serviceSelect.value;
+      if (val.startsWith('Maintenance Package')) {
+        buildAlaCartePicker(1);
+      } else if (val.startsWith('The Whole Shabang')) {
+        buildAlaCartePicker(3);
+      } else {
+        buildAlaCartePicker(0);
+      }
+    });
+
+    // ---- "Book Now" / "Book This" buttons: scroll to the form and preselect the service ----
+    document.querySelectorAll('.book-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const service = btn.getAttribute('data-service');
+        document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
+        if (service) {
+          serviceSelect.value = service;
+          serviceSelect.dispatchEvent(new Event('change'));
+        }
+      });
+    });
+  </script>
+</body>
+</html>
